@@ -1,4 +1,8 @@
-# Capstone
+# Faultlines 
+by Shawn Sobieski
+
+## Goal
+As American political opinion seems to get more and more bifricated, I intend to analyze this trend using machine learning techniques to predict voting patterns of Americans going into the 2020 Presendential election. 
 
 ## Purpose
 As a political analyst, I will plot trends in political opinion to get an understanding of how Americans feel about particular issues. Using time series analysis I will attempt to predict where these trends are heading. I will repeat this analysis for several questions, and break the data down into political groupings such as voters and non-voters, or Republicans, Democrats and Independents.  
