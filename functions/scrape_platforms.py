@@ -31,5 +31,6 @@ def scrape_platforms(years):
         
         df['year'][year + '-Rep'] = year
         df['year'][year + '-Dem'] = year
-    
+        
+    df = pd.DataFrame(df)
     return df
