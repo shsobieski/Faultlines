@@ -1,5 +1,5 @@
 def party_splits(df, var_list, split = 'by party'):
-    split_ready = df.join(party['party'])
+    split_ready = df.join(party.loc['party'])
     rep_df = split_ready[(split_ready['party']=='Republican')|
                          (split_ready['party']=='Lean Republican')|
                          (split_ready['party']=='Strong Republican')]
