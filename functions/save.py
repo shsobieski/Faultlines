@@ -9,7 +9,7 @@ def save(question, split='overall', visualize= True):
         
         if visualize:
             fig = plt.figure(figsize=(16,4))
-            ax1, ax2, ax3 = fig.subplots(nrows=1, ncols=3)
+            ax1, ax2, ax3 = fig.subplots(nrows=1, ncols=3, sharey=True)
             rep_preds.plot(title= 'republican', ax= ax1)
             dem_preds.plot(title= 'democrat', ax=ax2)
             ind_preds.plot(title='independent', ax=ax3);
@@ -33,7 +33,7 @@ def save(question, split='overall', visualize= True):
         oth_preds.to_excel('data/predictions/{}/leveled/other.xlsx'.format(question)) 
         
         if visualize:
-            fig = plt.figure(figsize=(16,8))
+            fig = plt.figure(figsize=(16,8), sharey=True)
             ((ax1, ax2, ax3, ax4),
              (ax5, ax6, ax7, ax8))= fig.subplots(nrows=2, ncols=4)
             str_rep_preds.plot(title='strong republican', ax= ax1)
