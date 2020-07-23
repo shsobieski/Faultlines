@@ -33,9 +33,9 @@ def save(question, split='overall', visualize= True):
         oth_preds.to_excel('data/predictions/{}/leveled/other.xlsx'.format(question)) 
         
         if visualize:
-            fig = plt.figure(figsize=(16,8), sharey=True)
+            fig = plt.figure(figsize=(16,8))
             ((ax1, ax2, ax3, ax4),
-             (ax5, ax6, ax7, ax8))= fig.subplots(nrows=2, ncols=4)
+             (ax5, ax6, ax7, ax8))= fig.subplots(nrows=2, ncols=4, sharey=True)
             str_rep_preds.plot(title='strong republican', ax= ax1)
             mid_rep_preds.plot(title='republican', ax=ax2)
             ln_rep_preds.plot(title='lean republican', ax=ax3)
