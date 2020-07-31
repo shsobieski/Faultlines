@@ -10,10 +10,7 @@ def save(question, split='overall', visualize= True):
             rep_dem_diffs[question+' '+col]= abs(rep_preds[col]-dem_preds[col])
             rep_ind_diffs[question+' '+col]= abs(rep_preds[col]-ind_preds[col])
             dem_ind_diffs[question+' '+col]= abs(dem_preds[col]-ind_preds[col])
-        print(rep_dem_diffs)
-        print(rep_ind_diffs)
-        print(dem_ind_diffs)
-        
+            
         if visualize:
             fig = plt.figure(figsize=(8,24))
             (ax1), (ax2), (ax3) = fig.subplots(nrows=3, ncols=1, sharey=True)
