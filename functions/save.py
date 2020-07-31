@@ -6,10 +6,17 @@ def save(question, split='overall', visualize= True):
         dem_preds.to_excel('data/predictions/{}/overall/democrat.xlsx'.format(question))
         ind_preds = store_predictions(ind_ts)
         ind_preds.to_excel('data/predictions/{}/overall/independent.xlsx'.format(question))
+        for col in rep_preds.columns:
+            rep_dem_diffs[question+' '+col]= abs(rep_preds[col]-dem_preds[col])
+            rep_ind_diffs[question+' '+col]= abs(rep_preds[col]-ind_preds[col])
+            dem_ind_diffs[question+' '+col]= abs(dem_preds[col]-ind_preds[col])
+        print(rep_dem_diffs)
+        print(rep_ind_diffs)
+        print(dem_ind_diffs)
         
         if visualize:
-            fig = plt.figure(figsize=(16,4))
-            ax1, ax2, ax3 = fig.subplots(nrows=1, ncols=3, sharey=True)
+            fig = plt.figure(figsize=(8,24))
+            (ax1), (ax2), (ax3) = fig.subplots(nrows=3, ncols=1, sharey=True)
             rep_preds.plot(title= 'republican', ax= ax1)
             dem_preds.plot(title= 'democrat', ax=ax2)
             ind_preds.plot(title='independent', ax=ax3);
@@ -33,9 +40,9 @@ def save(question, split='overall', visualize= True):
         oth_preds.to_excel('data/predictions/{}/leveled/other.xlsx'.format(question)) 
         
         if visualize:
-            fig = plt.figure(figsize=(16,8))
-            ((ax1, ax2, ax3, ax4),
-             (ax5, ax6, ax7, ax8))= fig.subplots(nrows=2, ncols=4, sharey=True)
+            fig = plt.figure(figsize=(16,32))
+            ((ax1, ax2), (ax3, ax4),
+             (ax5, ax6), (ax7, ax8))= fig.subplots(nrows=4, ncols=2, sharey=True)
             str_rep_preds.plot(title='strong republican', ax= ax1)
             mid_rep_preds.plot(title='republican', ax=ax2)
             ln_rep_preds.plot(title='lean republican', ax=ax3)
