@@ -53,7 +53,7 @@ The Faultlines project also breaks party affiliation down by demographic group. 
 Paired with the fact that more and more people are identifying as independent across every age group it seems as though as the party platforms get more and more partisan and divided, Americans are feeling less comfortable identifying with one. 
 
 ![](visuals/age_demo_top.PNG)
-![](visuals/age_demo_bottome.PNG)
+![](visuals/age_demo_bottom.PNG)
 
 ### Conclusions
 - Americans are rapidly distancing themselves from the traditional two-party system, and as a result the opinion gap between the two parties is expanding.
