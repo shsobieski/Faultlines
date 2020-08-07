@@ -1,4 +1,8 @@
 def unzip(file):
+    """
+    Unzips a tarfile and returns a DataFrame from the file
+    
+    """
     my_tar = tarfile.open('data/zipped_data/'+ file +'.tar.gz')
     my_tar.extractall('./data/unzipped_data/' + file)
     my_tar.close()

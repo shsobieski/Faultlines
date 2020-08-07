@@ -1,4 +1,8 @@
 def store_predictions(df):
+    """
+    Returns a DataFrame with original time series and predictions in same DataFrame 
+    
+    """
     ts = df[df.columns[1]]
     base = pd.DataFrame(ts)
     preds = make_preds(ts, 'Predicted '+ df.columns[1])

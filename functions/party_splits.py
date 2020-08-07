@@ -1,4 +1,11 @@
 def party_splits(df, var_list, split = 'by party'):
+    """
+    Splits a DataFrame into time series grouped by party affiliation
+    
+    Keywords:
+    split= 'by party': splits into three groups
+    split= 'within party': splits into eight groups
+    """
     split_ready = df.join(party['party'])
     rep_df = split_ready[(split_ready['party']=='Republican')|
                          (split_ready['party']=='Lean Republican')|

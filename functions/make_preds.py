@@ -1,4 +1,9 @@
 def make_preds(ts, name):
+    """
+    Chooses parameters for and returns predictions from an 
+    ARIMA model based time series
+    
+    """
     ts.index = pd.to_datetime(overall['year'], format='%Y')
     ts.index = ts.index.to_period('Y')
     ts.dropna(inplace = True)

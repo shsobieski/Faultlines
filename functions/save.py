@@ -1,4 +1,8 @@
 def save(question, split='overall', visualize= True):
+    """
+    Makes and saves predictions based on created time series
+    
+    """
     if split == 'overall':
         rep_preds = store_predictions(rep_ts)
         rep_preds.to_excel('data/predictions/{}/overall/republican.xlsx'.format(question))
